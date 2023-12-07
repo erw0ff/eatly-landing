@@ -1,0 +1,49 @@
+
+.header {
+  margin-top: 48px;
+  margin-bottom: 28px;
+  padding-bottom: 25px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr;
+  justify-content: center;
+  align-content: center;
+  border-bottom: $borderLine;
+
+  &__logo {
+    align-self: start;
+    display: flex;
+
+    &-text {
+      font-size: 21px;
+      align-self: center;
+      margin-left: 11px;
+      color: $accentColor;
+    }
+  }
+
+
+  &__nav {
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 54px;
+  }
+
+
+  &__login {
+    align-self: center;
+    justify-self: end;
+
+    &-item {
+      padding: 18px 27px;
+      margin-left: 9px;
+    }
+
+    .login {
+      @include ColoredButton(none, inherit, none);
+    }
+    .signup {
+      @include ColoredButton($borderButton, $fontWhite, $accentColor);
+    }
+  }
+}

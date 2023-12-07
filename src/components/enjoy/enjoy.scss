@@ -1,0 +1,252 @@
+.enjoy {
+  margin-top: 130px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: space-around;
+
+  &__text {
+
+    .enjoyContainer {
+      padding-top: 28px;
+      border-top: $borderLine;
+      position: relative;
+      max-width: 520px;
+
+      &__manyreviews {
+        position: absolute;
+        top: -10px;
+        left: 50px;
+        background-color: $mainbgColor;
+        color: rgba(32, 31, 31, 0.20);
+        padding-left: 15px;
+        width: 100%;
+      }
+
+      &__title {
+        color: $fontBlack;
+        font-size: 75px;
+
+        line-height: 120%;
+        letter-spacing: -3px;
+
+        &-world {
+          color: $accentColor;
+        }
+      }
+
+      &__par {
+        padding-top: 16px;
+        font-size: 18px;
+
+        &-link {
+          color: $accentColor;
+        }
+      }
+    }
+
+    .get-started {
+      margin-top: 53px;
+
+      &__buttons {
+        display: flex;
+
+        &-getstarted {
+          display: block;
+
+          @include ColoredButton (none, $fontWhite, $accentColor);
+
+        }
+        &-gopro {
+          margin-left: 18px;
+          display: block;
+
+          @include ColoredButton ($borderButton,$accentColor, inherit);
+        }
+      }
+
+      &__icons {
+        margin-top: 44px;
+        display: flex;
+        align-items: center;
+
+        &-trustpilot {
+          margin-right: 20px;
+          padding-bottom: 8px;
+        }
+        &-stars {
+          margin-right: 10px;
+        }
+      }
+    }
+
+  }
+
+  &__pictures {
+    position: relative;
+    margin-right: 90px;
+
+    &-mainpic {
+      background: linear-gradient(137deg, #6C5FBC 4.83%, #5144A0 98.22%);
+      border-radius: 50%;
+
+      &-item {
+        position: relative;
+        right: 22px;
+        top: 22px;
+        padding: 0;
+      }
+    }
+
+
+    .cards {
+      position: relative;
+
+      &__01 {
+        position: absolute;
+        z-index: 2;
+        top: -160px;
+        left: -100px;
+
+        background: #FFF;
+        border: 0.278px solid #EDF2F7;
+        display: flex;
+        flex-direction: column;
+        width: 207px;
+        height: 205px;
+        border-radius: 17px;
+        box-shadow: 14px 18px 37px 0px rgba(26, 32, 44, 0.15);
+        font-size: 6.5px;
+        overflow: hidden;
+
+        &-header {
+          margin: 0 10px;
+
+          &-list {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 17px;
+
+            &-item {
+              padding: 4px 8px;
+            }
+
+            &-item--active {
+              padding: 4px 8px;
+              border-radius: 14px;
+              background: $accentColor;
+              color: $fontWhite;
+            }
+          }
+        }
+
+        &-body {
+          width: 100%;
+          padding-top: 40px;
+        }
+
+        &-footer {
+          margin: 0 10px;
+
+          &-list {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 16px;
+
+            &-item {
+              padding: 3px 6px;
+            }
+
+            &-item--active {
+              padding: 3px 6px;
+              border-radius: 16.759px;
+              background: rgba(231, 231, 231, 0.92);
+              color: #151515;
+            }
+          }
+        }
+      }
+
+      &__02 {
+        position: absolute;
+        top: -500px;
+        left: 185px;
+        z-index: 3;
+        background-color: $fontWhite;
+        border: 0.5px solid #EDF2F7;
+        display: flex;
+        justify-content: space-around;
+        width: 330px;
+        height: 90px;
+        border-radius: 16.406px;
+        box-shadow: -17px 23px 20px 0px rgba(34, 60, 80, 0.2);
+
+        &-header {
+          max-width: 74px;
+          align-self: center;
+          padding-top: 10px;
+
+          &-pic {
+            width: 100%;
+            object-fit: contain;
+          }
+        }
+
+
+        &-body {
+          align-self: center;
+
+          &-title {
+            color: #323142;
+            font-size: 15px;
+            margin: 10px 0;
+          }
+
+          &-par {
+            color: #323142;
+            font-size: 10px;
+            margin: 10px 0;
+          }
+        }
+
+        &-footer {
+          align-self: flex-end;
+          padding: 10px;
+          &-time {
+            color: $timeColor;
+            font-size: 10px;
+          }
+        }
+
+
+      }
+    }
+
+    .vectors {
+      position: relative;
+
+      &__list-01 {
+        position: absolute;
+        z-index: 1;
+
+        top: -530px;
+        left: 510px;
+      }
+
+      &__list-02 {
+        position: absolute;
+        z-index: 1;
+
+        left: -140px;
+        top: 50px;
+      }
+
+      &__list-03 {
+        position: absolute;
+        z-index: -1;
+
+        top: -380px;
+        left: 385px;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "./variables.scss";
+
+.wrapper {
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 0 17px;
+}
+
+body {
+  font-family: $mainFont;
+  font-size: 18px;
+  background-color: $mainbgColor;
+}
+
+P {
+  font-family: $pFont;
+}

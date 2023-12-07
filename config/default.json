@@ -1,0 +1,5 @@
+{
+  "mode": "development",
+  "htmlDocumentTitle": "Development",
+  "devtool": "inline-source-map"
+}
