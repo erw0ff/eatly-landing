@@ -1,0 +1,65 @@
+#statistic-bg {
+  background-image: url("../../assets/images/statistics/BG.png");
+  background-size: cover;
+}
+
+.statistic {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+  padding: 55px 0;
+  margin-top: 135px;
+  overflow: hidden;
+
+
+  //&__dishes {
+  //  border-left: 1px solid rgba(203, 213, 225, 0.15);
+  //  border-right: 1px solid rgba(203, 213, 225, 0.15);
+  //}
+
+  &__dishes{
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -61px;
+      width: 1px;
+      height: 122px;
+      background-color: rgba(203, 213, 225, 0.15);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -61px;
+      width: 1px;
+      height: 122px;
+      background-color: rgba(203, 213, 225, 0.15);
+    }
+  }
+
+  &__costumers, &__dishes, &__support {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &-title {
+      color: $fontWhite;
+      font-size: 43px;
+      align-self: center;
+    }
+
+    &-text {
+      padding-top: 5px;
+      align-items: center;
+      color: $blueGray;
+      font-size: 15px;
+      align-self: center;
+      text-align: center;
+    }
+  }
+}
