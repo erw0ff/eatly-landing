@@ -1,0 +1,72 @@
+.quality {
+  margin-top: 120px;
+  display: grid;
+  gap: 170px;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+
+  &__img-phone {
+    width: 100%;
+  }
+
+  &__text {
+    align-self: center;
+
+    &-title {
+      font-size: 50px;
+      color: $fontBlack;
+
+      &-quality {
+        color: $accentColor;
+      }
+    }
+
+    &-list {
+      margin: 65px 0;
+      font-family: $pFont;
+      font-size: 20px;
+      line-height: 150%;
+      list-style: disc;
+      position: relative;
+
+      li {
+        margin-left: 23px;
+
+        &:last-child {
+          padding-top: 28px;
+        }
+      }
+
+      &::before {
+        content: url("../../assets/images/quality/lines.svg");
+        position: absolute;
+        top: -290px;
+        left: -280px;
+      }
+
+      &::after {
+        content: url("../../assets/images/quality/arrow.png");
+        position: absolute;
+        top: 240px;
+        left: 130px;
+      }
+    }
+
+    &-button {
+      position: relative;
+      @include ColoredButton (none, $fontWhite, $accentColor);
+
+      &::after {
+        content: "";
+        position: relative;
+        display: inline-block;
+        background-image: url("../../assets/images/quality/arrow-right.svg");
+        background-size: cover;
+        top: 7px;
+        left: 5px;
+        width: 27px;
+        height: 27px;
+      }
+    }
+  }
+}
