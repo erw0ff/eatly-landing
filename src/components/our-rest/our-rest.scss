@@ -1,0 +1,58 @@
+.our-rest {
+  margin-top: 100px;
+
+  &__title {
+    font-size: 45px;
+    color: $fontBlack;
+    text-align: center;
+
+    &-word {
+      color: $accentColor;
+    }
+  }
+
+  &__cards {
+    margin-top: 85px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+
+
+    .rest-card {
+      box-shadow: 5.946px 71.348px 35.674px 2px rgba(229, 229, 229, 0.70);
+      border: $borderLine;
+      border-radius: 30px;
+
+      &__header {
+        height: 176px;
+        background-image: url("../../assets/images/our-rest/image.png");
+        background-size: cover;
+      }
+
+      &__body {
+        margin: 10px 0 0 34px;
+
+        &-link {
+          color: $yellowColor;
+          background-color: $yellowBG;
+          font-size: 12.5px;
+          padding: 3px 7px;
+          border-radius: 5.5px;
+        }
+        &-title {
+          font-size: 25px;
+          color: $fontBlack;
+          line-height: 42px;
+        }
+      }
+
+      &__footer {
+        margin-left: 34px;
+        display: flex;
+        justify-content: flex-start;
+        gap: 0 10px;
+        padding-bottom: 18px;
+      }
+    }
+  }
+}
