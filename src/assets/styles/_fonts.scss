@@ -46,26 +46,3 @@
   url('/../fonts/poppins/Poppins-Regular.ttf') format('eot')
 }
 
-//$root: "https://noda.blob.core.windows.net/noda-fonts/Poppins";
-//
-//$fonts: (
-//  "Poppins-Thin": 100,
-//  "Poppins-ExtraLight": 200,
-//  "Poppins-Light": 300,
-//  "Poppins-Regular": 400,
-//  "Poppins-Medium": 500,
-//  "Poppins-SemiBold": 600,
-//  "Poppins-Bold": 700,
-//  "Poppins-ExtraBold": 800,
-//  "Poppins-Black": 900,
-//);
-//
-//@each $font, $fw in $fonts {
-//  $font-family: string.unquote($font);
-//
-//  @font-face {
-//    font-family: "Poppins";
-//    src: url(#{$root}/#{$font-family}.ttf);
-//    font-weight: $fw;
-//  }
-//}

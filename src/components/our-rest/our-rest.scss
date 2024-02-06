@@ -24,6 +24,17 @@
       border-radius: 30px;
       overflow: hidden;
 
+      .burger {
+        height: 176px;
+        background-image: url("../../assets/images/our-rest/image_1.png");
+        background-size: cover;
+      }
+      .chiken {
+        height: 176px;
+        background-image: url("../../assets/images/our-rest/image.png");
+        background-size: cover;
+      }
+
       &__body {
         margin: 10px 0 0 34px;
 
@@ -52,8 +63,11 @@
         margin-left: 34px;
         display: flex;
         gap: 0 10px;
+        color: $grayCardColor;
 
         .time {
+          color: inherit;
+
           &::after {
             content: url("../../assets/images/our-rest/star.png");
             position: relative;
@@ -63,6 +77,7 @@
         }
 
         .rating {
+          color: inherit;
           position: relative;
           top: -14px;
 
@@ -83,7 +98,9 @@
     gap: 10px;
     margin-top: 65px;
     font-size: 20px;
-    color: $timeColor;
+    color: $grayCardColor;
+    padding-bottom: 120px;
+    border-bottom: $borderLine;
 
     &-img {
       background-image: url("../../assets/images/our-rest/arrow-right.svg");
@@ -94,14 +111,3 @@
   }
 }
 
-
-.burger {
-  height: 176px;
-  background-image: url("../../assets/images/our-rest/image_1.png");
-  background-size: cover;
-}
-.chiken {
-  height: 176px;
-  background-image: url("../../assets/images/our-rest/image.png");
-  background-size: cover;
-}

@@ -1,0 +1,150 @@
+.dishes {
+  margin-top: 100px;
+
+  &__title {
+    font-size: 45px;
+    color: $fontBlack;
+    text-align: center;
+
+    &-word {
+      color: $accentColor;
+    }
+  }
+
+  &__cards {
+    margin-top: 85px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 30px;
+
+    .dishes-card {
+      box-shadow: 6.84px 82.18px 41.09px 0px #E5E5E5B2;
+      border: $borderLine;
+      border-radius: 30px;
+      overflow: hidden;
+
+      &__header {
+        margin: 35px 20px 0 15px;
+
+        &::after {
+          content: url("../../assets/images/dishes/heart.svg");
+          position: relative;
+          left: 160px;
+          top: -14px;
+          cursor: pointer;
+        }
+      }
+
+      .chiken {
+        height: 184px;
+        background-image: url("../../assets/images/dishes/food_image1.png");
+        background-size: cover;
+      }
+      .swedish {
+        height: 184px;
+        background-image: url("../../assets/images/dishes/food_image2.png");
+        background-size: cover;
+      }
+      .fish {
+        height: 184px;
+        background-image: url("../../assets/images/dishes/food_image3.png");
+        background-size: cover;
+       }
+
+      &__body {
+        margin-left: 23px;
+
+        &-link {
+          color: $yellowColor;
+          background-color: $yellowBG;
+          font-size: 12.5px;
+          padding: 3px 7px;
+          border-radius: 5.5px;
+        }
+        &-redLink {
+          color: $redColor;
+          background-color: $redBG;
+          font-size: 12.5px;
+          padding: 3px 7px;
+          border-radius: 5.5px;
+        }
+        &-greenLink {
+           color: $greenColor;
+           background-color: $greenBG;
+           font-size: 12.5px;
+           padding: 3px 7px;
+           border-radius: 5.5px;
+         }
+        &-title {
+          font-size: 25px;
+          color: $fontBlack;
+          line-height: 42px;
+        }
+      }
+
+      &__footer {
+        margin-left: 23px;
+        display: flex;
+        gap: 0 10px;
+        color: $grayCardColor;
+
+        .time {
+          color: inherit;
+
+          &::after {
+            content: url("../../assets/images/dishes/star.svg");
+            position: relative;
+            top: 6px;
+            left: 5px;
+          }
+        }
+
+        .rating {
+          color: inherit;
+          position: relative;
+          top: 8px;
+        }
+      }
+
+      &__add2cart {
+        margin: 10px 23px 30px;
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        font-size: 24px;
+        font-weight: 700;
+
+        .price {
+          align-self: center;
+          color: $blackBG;
+        }
+
+        .cent {
+          font-size: 20px;
+          font-weight: 500;
+          color: $grayCardColor;
+
+        }
+
+        .add {
+          padding: 5px 13px;
+          border-radius: 10px;
+          background-color: $blackBG;
+          align-self: center;
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 65px;
+    font-size: 20px;
+    color: $grayCardColor;
+    padding-bottom: 120px;
+    border-bottom: $borderLine;
+  }
+}
