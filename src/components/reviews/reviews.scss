@@ -1,5 +1,10 @@
+body {
+  overflow-x: hidden;
+}
+
 .customers {
   margin-top: 115px;
+  margin-bottom: 210px;
 
   &__title {
     color: $fontBlack;
@@ -17,19 +22,105 @@
     gap: 40px;
     align-items: start;
 
-
     .review {
-      font-size: 18px;
-      font-weight: 400;
-      font-style: italic;
       padding: 35px 43px;
-      border-radius: 15px;
+      border-radius: 25px;
       box-shadow: 0px 0px 100px 10px rgba(34, 60, 80, 0.2);
       max-width: 530px;
       flex-shrink: 0;
-      &__header {
 
+      &__header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+
+        &-text {
+          display: flex;
+          flex-flow: column;
+          gap: 5px;
+
+          .review-text__name {
+            font-size: 21px;
+            font-weight: 600;
+            color: $fontBlack;
+          }
+
+          .review-text__time {
+            font-size: 17px;
+          }
+        }
+
+        &-quotes {
+          flex-grow: 1;
+          text-align: end;
+        }
       }
+
+      &__body {
+        padding-top: 32px;
+        font-size: 18px;
+        font-weight: 400;
+        font-style: italic;
+        color: $grayCardColor;
+        text-align: justify;
+      }
+
+      &__footer {
+        padding-top: 32px;
+      }
+    }
+  }
+
+  &__subscribe {
+    margin-top: 180px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 64px 60px;
+    border-radius: 35px;
+    background-color: $accentColor;
+    background-image: url("../../assets/images/reviews/banner-bg.png");
+    background-size: contain;
+    max-height: 270px;
+
+    .subscribe-form {
+
+      &__title {
+        font-size: 70px;
+        font-weight: 800;
+        line-height: 105px;
+        color: $fontWhite;
+        margin-bottom: 10px;
+      }
+
+      &__input {
+        font-size: 16px;
+        font-weight: 400;
+        color: $grayCardColor;
+        border-radius: 20px;
+        border: none;
+        box-shadow: 0px 7px 45px 0px #0000001A;
+        padding: 22px 0 22px 22px;
+        width: 440px;
+      }
+
+      &__button {
+        padding: 15px 25px;
+        background-color: $accentColor;
+        border: none;
+        border-radius: 15px;
+        color: $fontWhite;
+        font-style: $mainFont;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+        position: relative;
+        left: -146px;
+      }
+    }
+
+    &-image {
+      padding-top: 30px;
     }
   }
 }
