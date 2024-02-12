@@ -11,6 +11,13 @@
   margin-top: 135px;
   overflow: hidden;
 
+  @include md (margin-top, 80px);
+  @include sm-block {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
   &__dishes{
     position: relative;
 

@@ -2,15 +2,31 @@
   margin-top: 130px;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  justify-content: space-around;
+  gap: 20px;
+  justify-content: space-between;
+
+  @include lg-block {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    margin-top: 80px;
+  }
+
+  @include sm-block {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr;
+  }
 
   &__text {
 
-    .enjoyContainer {
+    .enjoy-container {
       padding-top: 28px;
       border-top: $borderLine;
       position: relative;
       max-width: 520px;
+
+      @include sm-block {
+        max-width: 100%;
+      }
 
       &__manyreviews {
         position: absolute;
@@ -25,9 +41,10 @@
       &__title {
         color: $fontBlack;
         font-size: 75px;
-
         line-height: 120%;
-        letter-spacing: -3px;
+
+        @include sm (text-align, center);
+        @include xs (font-size, 50px);
 
         &-world {
           color: $accentColor;
@@ -37,6 +54,8 @@
       &__par {
         padding-top: 16px;
         font-size: 18px;
+
+        @include sm (text-align, center);
 
         &-link {
           color: $accentColor;
@@ -49,6 +68,8 @@
 
       &__buttons {
         display: flex;
+
+        @include sm (justify-content, center);
 
         &-getstarted {
           display: block;
@@ -69,6 +90,8 @@
         display: flex;
         align-items: center;
 
+        @include sm (justify-content, center);
+
         &-trustpilot {
           margin-right: 20px;
           padding-bottom: 8px;
@@ -85,60 +108,96 @@
     position: relative;
     margin-right: 90px;
 
+    @include lg (margin-right, 0);
+
     &::after {
       content: url("/../../assets/images/enjoy/illustration01.svg");
       position: absolute;
       top: -80px;
-      left: 510px;
+      left: 470px;
+
+      @include lg (display, none);
+
     }
 
     &-mainpic {
-      background: linear-gradient(137deg, #6C5FBC 4.83%, #5144A0 98.22%);
+      background: linear-gradient(137deg, #6C5FBC 5%, #5144A0 98%);
       border-radius: 50%;
+      width: 100%;
+      height: auto;
 
       &::after {
         content: url("/../../assets/images/enjoy/illustration03.svg");
         position: absolute;
         z-index: -1;
-
         top: 80px;
         left: 390px;
+
+        @include lg (display, none);
+
+      }
+
+      &::before {
+        content: url("/../../assets/images/enjoy/illustration02.svg");
+        position: absolute;
+        left: -130px;
+        top: 495px;
+
+        @include lg (display, none);
+
       }
 
       &-item {
         position: relative;
         right: 22px;
         top: 22px;
-        padding: 0;
+
+        @include lg (width, 100%);
       }
     }
 
     .cards {
       position: relative;
 
-      &::before {
-        content: url("/../../assets/images/enjoy/illustration02.svg");
-        position: absolute;
-        left: -130px;
-        top: 45px;
+      @include lg-block () {
+        position: static;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: -140px;
+        gap: 20px;
       }
+
+      @include sm-block {
+        margin-top: -90px;
+        flex-flow: row wrap;
+        align-items: flex-end;
+        gap: 20px;
+      }
+
+      @include xs (margin-top, 0);
+
+
 
       &__01 {
         position: absolute;
         z-index: 2;
         top: -160px;
         left: -100px;
-
         background: #FFF;
-        border: 0.278px solid #EDF2F7;
+        border: 0.3px solid #EDF2F7;
         display: flex;
         flex-direction: column;
-        width: 207px;
+        max-width: 207px;
         height: 205px;
         border-radius: 17px;
-        box-shadow: 14px 18px 37px 0px rgba(26, 32, 44, 0.15);
+        box-shadow: 14px 18px 37px 0 rgba(26, 32, 44, 0.15);
         font-size: 6.5px;
         overflow: hidden;
+
+        @include lg (position, static);
+        @include lg (order, 1);
 
 
 
@@ -198,11 +257,18 @@
         background-color: $fontWhite;
         border: 0.5px solid #EDF2F7;
         display: flex;
-        justify-content: space-around;
-        width: 330px;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 0 10px;
+        width: 280px;
         height: 90px;
         border-radius: 16.406px;
         box-shadow: -17px 23px 20px 0px rgba(34, 60, 80, 0.2);
+
+        @include lg (position, static);
+        @include lg (width, 320px);
+        @include sm (width, 280px);
+
 
         &-header {
           max-width: 74px;
@@ -214,7 +280,6 @@
             object-fit: contain;
           }
         }
-
 
         &-body {
           align-self: center;
@@ -234,7 +299,10 @@
 
         &-footer {
           align-self: flex-end;
-          padding: 10px;
+          flex-grow: 1;
+          padding: 0 5px 10px;
+          text-align: end;
+
           &-time {
             color: $grayCardColor;
             font-size: 10px;
