@@ -1,10 +1,16 @@
 .dishes {
   margin-top: 100px;
 
+  @include xs (margin-top, 50px);
+
+
   &__title {
     font-size: 45px;
     color: $fontBlack;
     text-align: center;
+
+    @include xs (font-size, 35px);
+
 
     &-word {
       color: $accentColor;
@@ -14,45 +20,39 @@
   &__cards {
     margin-top: 85px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 30px;
 
+    @include sm (gap, 15px);
+    @include xs (margin-top, 40px);
+
     .dishes-card {
-      box-shadow: 7px 50px 30px 0px #E5E5E5B2;
+      box-shadow: 7px 50px 30px 0 #E5E5E5B2;
       border: $cardsBorder;
       border-radius: 30px;
       overflow: hidden;
+      padding: 35px 20px 30px 15px;
+
 
       &__header {
-        margin: 35px 20px 0 15px;
+        position: relative;
 
-        &::after {
+        &-img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+
+        &::before {
           content: url("../../assets/images/dishes/heart.svg");
-          position: relative;
-          left: 160px;
-          top: -14px;
+          position: absolute;
+          top: 0;
+          right: 0;
           cursor: pointer;
         }
       }
 
-      .chiken {
-        height: 184px;
-        background-image: url("../../assets/images/dishes/food_image1.png");
-        background-size: cover;
-      }
-      .swedish {
-        height: 184px;
-        background-image: url("../../assets/images/dishes/food_image2.png");
-        background-size: cover;
-      }
-      .fish {
-        height: 184px;
-        background-image: url("../../assets/images/dishes/food_image3.png");
-        background-size: cover;
-       }
-
       &__body {
-        margin-left: 23px;
 
         &-link {
           color: $yellowColor;
@@ -83,7 +83,6 @@
       }
 
       &__footer {
-        margin-left: 23px;
         display: flex;
         gap: 0 10px;
         color: $grayCardColor;
@@ -107,8 +106,7 @@
       }
 
       &__add2cart {
-        margin: 10px 23px 30px;
-        padding-top: 10px;
+        padding-top: 15px;
         display: flex;
         justify-content: space-between;
         height: 40px;
@@ -146,5 +144,12 @@
     color: $grayCardColor;
     padding-bottom: 120px;
     border-bottom: $borderLine;
+
+    &-img {
+      background-image: url("../../assets/images/dishes/arrow-right.svg");
+      width: 25px;
+      height: 25px;
+      background-size: cover;
+    }
   }
 }

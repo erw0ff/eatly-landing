@@ -1,15 +1,11 @@
 
 $break_lg: 1100px;
 $break_md: 960px;
+$break_xmd: 900px;
 $break_sm: 780px;
 $break_xs: 560px;
+$break_xxs: 440px;
 
-//@mixin wrapper() {
-//  max-width: 1140px;
-//  margin: 0 auto;
-//  padding-left: 24px;
-//  padding-right: 24px;
-//}
 
 @mixin lg($name, $value) {
     @media screen and (max-width: $break_lg){
@@ -25,13 +21,24 @@ $break_xs: 560px;
 
 @mixin md($name, $value) {
   @media screen and (max-width: $break_md){
-      #{$name}: $value;
+    #{$name}: $value;
   }
 }
 
 @mixin md-block() {
   @media screen and (max-width: $break_md){
-      @content;
+    @content;
+  }
+}
+@mixin xmd($name, $value) {
+  @media screen and (max-width: $break_xmd){
+    #{$name}: $value;
+  }
+}
+
+@mixin xmd-block() {
+  @media screen and (max-width: $break_xmd){
+    @content;
   }
 }
 
@@ -56,5 +63,17 @@ $break_xs: 560px;
 @mixin xs-block() {
   @media screen and (max-width: $break_xs){
       @content;
+  }
+}
+
+@mixin xxs($name, $value) {
+  @media screen and (max-width: $break_xxs){
+    #{$name}: $value;
+  }
+}
+
+@mixin xxs-block() {
+  @media screen and (max-width: $break_xxs){
+    @content;
   }
 }

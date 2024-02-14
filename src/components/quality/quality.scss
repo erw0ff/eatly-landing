@@ -10,13 +10,14 @@
   @include md (gap, 5%);
   @include sm-block {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.4fr 1fr;
     margin-top: 20px;
-    gap: 10px;
-    padding-bottom: 30px;
+    gap: 60px;
+    padding-bottom: 50px;
   }
 
   &__img {
+    @include sm (order, 1);
 
     &-phone {
       width: 100%;
@@ -28,20 +29,29 @@
       top: 40px;
       left: 360px;
     }
-
-    @include sm (order, 1);
   }
-
-
 
   &__text {
     align-self: center;
+
+    @include md (padding-left, 50px);
+    @include sm-block {
+      padding-left: 0;
+      order: 0;
+    }
 
     &-title {
       font-size: 50px;
       color: $fontBlack;
 
       @include sm (font-size, 40px);
+      @include sm (text-align, center);
+      @include sm-block {
+        font-size: 40px;
+        text-align: center;
+        margin-top: 25px;
+      }
+      @include xs (font-size, 35px);
 
       &-quality {
         color: $accentColor;
@@ -55,6 +65,8 @@
       line-height: 150%;
       list-style: disc;
       position: relative;
+
+      @include sm (margin, 35px 0);
 
       li {
         margin-left: 23px;
@@ -88,8 +100,5 @@
         height: 27px;
       }
     }
-
-    @include md (padding-left, 50px);
-    @include sm (order, 0);
   }
 }

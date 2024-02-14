@@ -5,16 +5,19 @@
 .footer {
 
   &__top {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-content: center;
     padding-top: 95px;
     padding-bottom: 30px;
     border-bottom: $borderLine;
+    gap: 20px;
 
-    &-logo {
+    @include xs (padding-top, 40px);
 
+      &-logo {
+      padding-right: 20px;
     }
 
     .top-nav {
@@ -22,6 +25,13 @@
       justify-content: flex-end;
       align-items: center;
       gap: 70px;
+
+      @include sm (gap, 35px);
+      @include xs-block {
+        width: 100%;
+        justify-content: space-between;
+        gap: 15px;
+      }
 
       &__item {
         font-style: $pFont;
@@ -32,11 +42,13 @@
   &__bottom {
     padding-top: 55px;
     padding-bottom: 80px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 
+    @include xs (padding-bottom, 40px);
 
     &-copyright {
       font-style: $pFont;
@@ -47,6 +59,9 @@
       display: flex;
       justify-content: flex-end;
       gap: 45px;
+
+      @include sm (gap, 20px);
+      @include xs (width, 100%);
 
       .socials__item {
         &-pic {

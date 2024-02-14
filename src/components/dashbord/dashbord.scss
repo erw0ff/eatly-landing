@@ -3,8 +3,13 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  gap: 20px;
   padding-bottom: 120px;
   border-bottom: $borderLine;
+
+
+  @include md (flex-flow, column);
+  @include md (align-items, center);
 
   &__control {
 
@@ -12,6 +17,8 @@
       font-size: 51px;
       Line-height: 58px;
       color: $fontBlack;
+
+      @include xs (font-size, 35px);
 
       .title__word {
         color: $accentColor;
@@ -24,41 +31,42 @@
       flex-flow: column wrap;
       gap: 15px;
 
-      &__card {
+      &__item {
         display: flex;
         align-items: center;
         gap: 20px;
         padding: 4px 17px;
         border-radius: 12px;
-        max-width: 345px;
+        max-width: 365px;
         border: $cardsBorder;
+        box-shadow: 0 0 59px -17px rgba(34, 60, 80, 0.2);
+
+        @include xs (padding, 4px 10px);
 
         &-pic {
-          background-size: cover;
           width: 73px;
-          height: 73px;
-        }
-        .card-pic1 {
-          background-image: url("/../../assets/images/dashboard/food-image1.png");
-        }
-        .card-pic2 {
-          background-image: url("/../../assets/images/dashboard/food-image2.png");
-        }
-        .card-pic3 {
-          background-image: url("/../../assets/images/dashboard/food-image3.png");
+
+          .pic__food {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
         }
 
-        .cardtext {
+        .item-text {
           display: flex;
           flex-flow: column;
           gap: 5px;
 
           &__name {
-            font-size: 18px;
+            font-size: 17px;
             line-height: 26px;
             font-weight: 700;
             color: $fontBlack;
+
+            @include xs (font-size, 15px);
           }
+
           &__status {
             font-family: $mainFont;
             font-size: 12px;
@@ -90,17 +98,27 @@
     border-radius: 25px;
     box-shadow: 7px 40px 50px 7px #E5E5E5B2;
 
+    @include sm-block {
+      max-width: 100%;
+      width: 100%;
+    }
 
     .pur-header {
-      margin: 25px 40px 0 40px;
+      padding: 25px 40px 0 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 5px;
+
+      @include xxs (padding, 25px 20px 0 20px);
 
       &__title {
         font-size: 28px;
         font-weight: 700;
         color: $fontBlack;
+
+        @include xxs (font-size, 24px);
+
       }
       &__dropdown {
         font-size: 19px;
@@ -113,6 +131,9 @@
         position: relative;
         top: -4px;
         cursor: pointer;
+
+        @include xxs (padding, 5px 5px 7px 10px);
+        @include xxs (font-size, 15px);
 
         &::after {
           content: url("/../../assets/images/dashboard/chevron-down.svg");
@@ -134,12 +155,17 @@
         margin: 0 37px;
         padding: 25px 25px 20px;
 
+        @include xxs (margin, 0 20px);
+
+
         &__top {
           display: flex;
           justify-content: space-around;
           align-items: center;
           gap: 20px;
           padding-bottom: 20px;
+
+          @include xxs (gap, 10px);
 
           &-text {
             display: flex;
@@ -150,11 +176,15 @@
               font-size: 19px;
               font-weight: 700;
               color: $fontBlack;
+
+              @include xxs (font-size, 16px);
             }
 
             .top-text__par {
               font-size: 15px;
               color: $grayCardColor;
+
+              @include xxs (font-size, 12px);
             }
           }
 
@@ -164,6 +194,8 @@
             font-size: 22px;
             font-weight: 700;
             color: $fontBlack;
+
+            @include xxs (font-size, 18px);
           }
         }
         &__bottom {

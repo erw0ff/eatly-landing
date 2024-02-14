@@ -5,6 +5,7 @@
   padding-bottom: 25px;
   display: grid;
   grid-template-columns: 1fr 2fr 3fr;
+  gap: 15px;
   justify-content: center;
   align-content: center;
   border-bottom: $borderLine;

@@ -1,0 +1,91 @@
+.modal {
+  max-width: 1440px;
+
+  &__logo {
+
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+
+    .signup {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+
+      &__title {
+        font-size: 35px;
+        font-weight: 600px;
+        color: $fontBlack;
+      }
+
+      &__form {
+
+        .form__with {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .form__or {
+          font-size: 20px;
+          text-align: center;
+        }
+
+        .form__reg {
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+
+
+          &-login {
+            font-family: $mainFont;
+            font-size: 19px;
+            font-weight: 700;
+
+            .login__word {
+              color: $accentColor;
+            }
+          }
+        }
+      }
+
+      &__links {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+      }
+    }
+
+    .find {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      background-color: $accentColor;
+      background-image: url("../../assets/images/modal-window/modal-bg.png");
+
+      &__pic {
+
+      }
+
+      &__text {
+        &-title {
+          font-family: $pFont;
+          color: $fontWhite;
+          font-weight: 800;
+          font-size: 40px;
+          text-align: center;
+        }
+
+        &-par {
+          color: $fontWhite;
+          font-size: 14px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
-body {
-  overflow-x: hidden;
-}
+//body {
+//  overflow-x: hidden;
+//}
 
 .customers {
   margin-top: 115px;
@@ -25,7 +25,7 @@ body {
     .review {
       padding: 35px 43px;
       border-radius: 25px;
-      box-shadow: 0px 0px 100px 10px rgba(34, 60, 80, 0.2);
+      box-shadow: 0 0 100px 10px rgba(34, 60, 80, 0.2);
       max-width: 530px;
       flex-shrink: 0;
 
@@ -75,6 +75,7 @@ body {
   &__subscribe {
     margin-top: 180px;
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     padding: 30px 64px 60px;
     border-radius: 35px;
@@ -83,7 +84,14 @@ body {
     background-size: contain;
     max-height: 270px;
 
-    .subscribe-form {
+    @include xmd-block {
+      max-height: 320px;
+      justify-content: center;
+      padding: 30px 10px 60px;
+    }
+
+    .form {
+      @include xs (width, 100%);
 
       &__title {
         font-size: 70px;
@@ -91,36 +99,62 @@ body {
         line-height: 105px;
         color: $fontWhite;
         margin-bottom: 10px;
+
+        @include xs (font-size, 60px);
+        @include xxs(font-size, 50px);
       }
 
-      &__input {
-        font-size: 16px;
-        font-weight: 400;
-        color: $grayCardColor;
-        border-radius: 20px;
-        border: none;
-        box-shadow: 0px 7px 45px 0px #0000001A;
-        padding: 22px 0 22px 22px;
-        width: 440px;
-      }
-
-      &__button {
-        padding: 15px 25px;
-        background-color: $accentColor;
-        border: none;
-        border-radius: 15px;
-        color: $fontWhite;
-        font-style: $mainFont;
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 22px;
+      &__container {
         position: relative;
-        left: -146px;
+
+        &-input {
+          font-size: 16px;
+          font-weight: 400;
+          color: $grayCardColor;
+          border-radius: 20px;
+          border: none;
+          box-shadow: 0 7px 45px 0 #0000001A;
+          padding: 22px 0 22px 22px;
+          width: 440px;
+          height: auto;
+
+          @include xs-block {
+            width: 100%;
+            font-size: 14px;
+            padding: 18px 0 18px 14px;
+          }
+          @include xxs (font-size, 12px);
+        }
+
+        &-button {
+          padding: 15px 25px;
+          background-color: $accentColor;
+          border: none;
+          border-radius: 15px;
+          color: $fontWhite;
+          font-style: $mainFont;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 22px;
+          position: absolute;
+          right: 5px;
+          top: 5px;
+
+          @include xs-block {
+            padding: 11px 12px;
+            top: 4px;
+            font-size: 13px;
+          }
+          @include xxs (font-size, 11px);
+          @include xxs (top, 3px);
+        }
       }
     }
 
     &-image {
       padding-top: 30px;
+
+      @include xmd (padding-top, 2px);
     }
   }
 }
