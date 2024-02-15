@@ -114,16 +114,17 @@
           border-radius: 20px;
           border: none;
           box-shadow: 0 7px 45px 0 #0000001A;
-          padding: 22px 0 22px 22px;
+          padding: 22px 155px 22px 22px;
           width: 440px;
           height: auto;
 
           @include xs-block {
             width: 100%;
             font-size: 14px;
-            padding: 18px 0 18px 14px;
+            padding: 18px 125px 18px 14px;
           }
           @include xxs (font-size, 12px);
+          @include xxs (padding-right, 115px);
         }
 
         &-button {
