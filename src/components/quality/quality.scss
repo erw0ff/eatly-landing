@@ -28,6 +28,8 @@
       position: relative;
       top: 40px;
       left: 360px;
+
+      @include xs (display, none);
     }
   }
 
@@ -85,7 +87,7 @@
         content: url("../../assets/images/quality/arrow.png");
         position: absolute;
         top: 40px;
-        left: 130px;
+        left: 120px;
       }
 
       &::after {

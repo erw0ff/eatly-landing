@@ -1,17 +1,13 @@
 const modalController = ({modalWindow, modalOpen, modalClose, timeout= 300}) => {
     const modalLinks = document.querySelectorAll(modalOpen);
     const modal = document.querySelector(modalWindow);
-    const close = document.querySelector(modalClose);
-    const body = document.querySelector('body');
 
-
-    let unlock = true;
 
     const closeModal = event => {
         event.preventDefault();
         const target = event.target;
 
-        if (target === modal || target.closest('.close') || event.code === 'Escape') {
+        if (target === modal || target.closest(modalClose) || event.code === 'Escape') {
             modal.style.opacity = 0;
 
             setTimeout(() => modal.style.visibility = 'hidden', timeout);
@@ -40,6 +36,5 @@ modalController( {
     modalWindow: '.modal-window',
     modalOpen: '._modal-link',
     modalClose: '.close',
-    timeout: 600
 
 });

@@ -1,50 +1,153 @@
-
 .header {
   margin-top: 48px;
   margin-bottom: 28px;
   padding-bottom: 25px;
   display: grid;
-  grid-template-columns: 1fr 2fr 3fr;
+  grid-template-columns: 1fr 4fr;
   gap: 15px;
-  justify-content: center;
+  justify-content: space-between;
   align-content: center;
   border-bottom: $borderLine;
 
-  &__logo {
-    align-self: start;
-    display: flex;
+  @include xmd (grid-template-columns, 1fr);
 
-    &-text {
-      font-size: 21px;
-      align-self: center;
-      margin-left: 11px;
-      color: $accentColor;
+  &__logo {
+    @include xmd-block {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-container {
+      display: flex;
+      padding-bottom: 5px;
+
+      @include xmd (order, 2);
+
+      .logo-container__text {
+        font-size: 21px;
+        align-self: center;
+        margin-left: 11px;
+        color: $accentColor;
+      }
+    }
+
+    &-burger-btn {
+      position: relative;
+      display: none;
+      width: 40px;
+      height: 40px;
+      border: none;
+
+      @include xmd (order, 1);
+
+      .burger-btn__line {
+        position: absolute;
+        height: 3px;
+        width: 30px;
+        background-color: black;
+        left: 5px;
+        transition: transform .5s, opacity .5s, background-color .5s;
+
+        &:nth-child(1) {
+          transform: translateY(-10px);
+        }
+        &:nth-child(3) {
+          transform: translateY(10px);
+        }
+      }
+
+      @include xmd-block {
+        display: block;
+        z-index: 6;
+        background-color: inherit;
+      }
     }
   }
 
 
   &__nav {
-    align-self: center;
     display: flex;
     justify-content: space-between;
-    gap: 54px;
+    align-items: center;
+
+    @include xmd-block {
+      position: absolute;
+      flex-flow: column;
+      top: 0;
+      left: -100%;
+      background-color: rgba(93, 47, 166, 0.76);
+      z-index: 5;
+      width: 100%;
+      height: 100%;
+      transition: transform .5s;
+    }
+
+    &-menu {
+      align-self: center;
+      display: flex;
+      justify-content: space-between;
+      gap: 54px;
+      padding-right: 80px;
+
+      @include xmd-block {
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        padding: 170px 20px 80px 20px;
+        gap: 25px;
+      }
+      .menu__item {
+        @include xmd-block {
+          font-size: 30px;
+          font-weight: 700;
+          color: $fontWhite;
+        }
+      }
+    }
+
+    &-login {
+      align-self: center;
+
+      @include xmd (padding, 40px);
+
+      &-item {
+        padding: 18px 27px;
+        margin-left: 9px;
+      }
+
+      .login {
+        @include ColoredButton(none, inherit, none);
+
+        @include xmd(color, $fontWhite);
+      }
+      .signup {
+        @include ColoredButton($borderButton, $fontWhite, $accentColor);
+      }
+    }
   }
 
+  &.open {
 
-  &__login {
-    align-self: center;
-    justify-self: end;
-
-    &-item {
-      padding: 18px 27px;
-      margin-left: 9px;
+    .header__nav {
+      @include xmd-block {
+        transform: translateX(100%);
+      }
     }
 
-    .login {
-      @include ColoredButton(none, inherit, none);
-    }
-    .signup {
-      @include ColoredButton($borderButton, $fontWhite, $accentColor);
+    .burger-btn__line {
+      background-color: white;
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(1) {
+        transform: translateY(0) rotate(45deg);
+      }
+
+      &:nth-child(3) {
+        transform: translateY(0) rotate(-45deg);
+      }
     }
   }
 }
