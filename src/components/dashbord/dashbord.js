@@ -1,1 +1,1 @@
-console.log("dachbord component works!")
+const dropDown = document.querySelector('.pur-header__dropdown');

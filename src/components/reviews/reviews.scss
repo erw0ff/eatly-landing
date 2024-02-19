@@ -42,6 +42,11 @@
       width: 530px;
       flex-shrink: 0;
       scroll-snap-align: center;
+      transition: all .3s;
+
+      &:hover {
+        box-shadow: 0 0 15px 1px rgba(172, 125, 255, 0.52);
+      }
 
       @include sm (padding, 15px 20px);
       @include sm (width, 450px);
@@ -163,8 +168,13 @@
           font-weight: 400;
           line-height: 22px;
           position: absolute;
-          right: 5px;
+          right: 6px;
           top: 5px;
+          transition: all .3s;
+
+          &:hover {
+            transform: scale(105%);
+          }
 
           @include xs-block {
             padding: 11px 12px;
@@ -178,7 +188,12 @@
     }
 
     &-image {
-      padding-top: 30px;
+      cursor: pointer;
+      transition: all .3s;
+
+      &:hover {
+        transform: scale(105%);
+      }
 
       @include xmd (padding-top, 2px);
     }

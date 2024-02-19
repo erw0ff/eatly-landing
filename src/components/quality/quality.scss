@@ -82,6 +82,13 @@
     &-button {
       position: relative;
       @include ColoredButton (none, $fontWhite, $accentColor);
+      display: inline-block;
+      padding-top: 10px;
+      transition: all .3s;
+
+      &:hover {
+        transform: scale(105%);
+      }
 
       &::before {
         content: url("../../assets/images/quality/arrow.png");

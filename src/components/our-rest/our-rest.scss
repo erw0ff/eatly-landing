@@ -31,6 +31,12 @@
       border: $cardsBorder;
       border-radius: 30px;
       overflow: hidden;
+      cursor: pointer;
+      transition: all .3s;
+
+      &:hover {
+        transform: scale(105%);
+      }
 
       &__header {
         &-img {
@@ -110,6 +116,7 @@
     color: $grayCardColor;
     padding-bottom: 120px;
     border-bottom: $borderLine;
+
 
     &-img {
       background-image: url("../../assets/images/our-rest/arrow-right.svg");
