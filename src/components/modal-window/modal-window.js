@@ -20,6 +20,7 @@ const modalController = ({modalWindow, modalOpen, modalClose, timeout= 300}) => 
         event.preventDefault();
         modal.style.visibility = 'visible';
         modal.style.opacity = 1;
+        modal.style.transition = 'all 0.6s ease 0s';
 
         window.addEventListener('keydown', closeModal);
     };

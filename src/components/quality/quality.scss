@@ -4,7 +4,7 @@
   gap: 170px;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
-  border-bottom: $borderLine;
+  border-bottom: var(--line);
   padding-bottom: 100px;
 
   @include md (gap, 5%);
@@ -44,7 +44,7 @@
 
     &-title {
       font-size: 50px;
-      color: $fontBlack;
+      color: var(--black);
 
       @include sm (font-size, 40px);
       @include sm (text-align, center);
@@ -55,14 +55,14 @@
       }
       @include xs (font-size, 35px);
 
-      &-quality {
-        color: $accentColor;
+      &-word {
+        color: var(--accent-color);
       }
     }
 
     &-list {
       margin: 65px 0;
-      font-family: $pFont;
+      font-family: var(--p-font);
       font-size: 20px;
       line-height: 150%;
       list-style: disc;
@@ -81,10 +81,10 @@
 
     &-button {
       position: relative;
-      @include ColoredButton (none, $fontWhite, $accentColor);
+      @include ColoredButton (none, var(--white), var(--accent-color));
       display: inline-block;
       padding-top: 10px;
-      transition: all .3s;
+      transition: transform .3s;
 
       &:hover {
         transform: scale(105%);
@@ -95,6 +95,7 @@
         position: absolute;
         top: 40px;
         left: 120px;
+        cursor: none;
       }
 
       &::after {

@@ -1,5 +1,5 @@
-.footer-bg {
-  background-color: #EAEAEA;
+#footer-bg {
+  background-color: var(--footer-bg);
 }
 
 .footer {
@@ -12,7 +12,7 @@
     align-content: center;
     padding-top: 95px;
     padding-bottom: 30px;
-    border-bottom: $borderLine;
+    border-bottom: var(--line);
     gap: 20px;
 
     @include xs (padding-top, 40px);
@@ -33,9 +33,9 @@
       }
 
       &:hover {
-        border-color: $accentColor;
-        box-shadow: 0px 0px 10px 9px $accentColor;
-        background-color: #fff;
+        border-color: var(--accent-color);
+        box-shadow: 0 0 10px 9px var(--accent-color);
+        background-color: var(--white);
       }
     }
 
@@ -43,7 +43,7 @@
       padding-right: 20px;
     }
 
-    .top-nav {
+    .nav {
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -57,11 +57,11 @@
       }
 
       &__item {
-        font-style: $pFont;
+        font-style: var(--p-font);
         transition: all .3s;
 
         &:hover {
-          color: $accentColor;
+          color: var(--accent-color);
         }
       }
     }
@@ -79,7 +79,7 @@
     @include xs (padding-bottom, 40px);
 
     &-copyright {
-      font-style: $pFont;
+      font-style: var(--p-font);
       font-size: 17px;
     }
 

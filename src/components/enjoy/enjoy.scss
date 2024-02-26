@@ -20,7 +20,7 @@
 
     .enjoy-container {
       padding-top: 28px;
-      border-top: $borderLine;
+      border-top: var(--line);
       position: relative;
       max-width: 520px;
 
@@ -28,18 +28,18 @@
         max-width: 100%;
       }
 
-      &__manyreviews {
+      &__users {
         position: absolute;
         top: -10px;
         left: 50px;
-        background-color: $mainbgColor;
+        background-color: var(--main-bg-color);
         color: rgba(32, 31, 31, 0.20);
         padding-left: 15px;
         width: calc(100% - 50px);
       }
 
       &__title {
-        color: $fontBlack;
+        color: var(--black);
         font-size: 75px;
         line-height: 120%;
 
@@ -47,7 +47,7 @@
         @include xs (font-size, 50px);
 
         &-world {
-          color: $accentColor;
+          color: var(--accent-color);
         }
       }
 
@@ -58,12 +58,12 @@
         @include sm (text-align, center);
 
         &-link {
-          color: $accentColor;
+          color: var(--accent-color);
         }
       }
     }
 
-    .get-started {
+    .started {
       margin-top: 53px;
 
       &__buttons {
@@ -79,7 +79,7 @@
             transform: scale(105%);
           }
 
-          @include ColoredButton (none, $fontWhite, $accentColor);
+          @include ColoredButton (none, var(--white), var(--accent-color));
 
         }
         &-gopro {
@@ -91,7 +91,7 @@
             transform: scale(105%);
           }
 
-          @include ColoredButton ($borderButton,$accentColor, inherit);
+          @include ColoredButton (var(--border-button),var(--accent-color), inherit);
         }
       }
 
@@ -159,7 +159,7 @@
     }
 
     &-mainpic {
-      background: linear-gradient(137deg, #6C5FBC 5%, #5144A0 98%);
+      background-color: var(--accent-color);
       border-radius: 50%;
       width: 100%;
       height: auto;
@@ -218,13 +218,13 @@
 
 
 
-      &__01 {
+      &__graphic {
         position: absolute;
         z-index: 2;
         top: -160px;
         left: -100px;
-        background: #FFF;
-        border: 0.3px solid #EDF2F7;
+        background-color: var(--white);
+        border: var(--cards-border);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -255,8 +255,8 @@
             &-item--active {
               padding: 4px 8px;
               border-radius: 14px;
-              background: $accentColor;
-              color: $fontWhite;
+              background-color: var(--accent-color);
+              color: var(--white);
             }
           }
         }
@@ -266,10 +266,10 @@
           padding: 20px 10px 0 0;
         }
 
-        &-footer {
+        .footer {
           padding: 0 10px 10px;
 
-          &-list {
+          &__list {
             display: flex;
             justify-content: space-around;
             padding-top: 16px;
@@ -278,22 +278,22 @@
               padding: 3px 6px;
             }
 
-            &-item--active {
+            ._active {
               padding: 3px 6px;
               border-radius: 16.759px;
-              background: rgba(231, 231, 231, 0.92);
+              background: rgba(49, 49, 58, 0.1);
               color: #151515;
             }
           }
         }
       }
 
-      &__02 {
+      &__food {
         position: absolute;
         top: -500px;
         left: 185px;
         z-index: 3;
-        background-color: $fontWhite;
+        background-color: var(--white);
         border: 0.5px solid #EDF2F7;
         display: flex;
         justify-content: space-between;
@@ -314,8 +314,9 @@
           align-self: center;
           padding-top: 10px;
 
-          &-pic {
+          .food__header-picture {
             width: 100%;
+            height: 100%;
             object-fit: contain;
           }
         }
@@ -323,14 +324,14 @@
         &-body {
           align-self: center;
 
-          &-title {
+          .body__title {
             color: #323142;
             font-size: 15px;
             margin: 10px 0;
           }
 
-          &-par {
-            color: #323142;
+          .body__par {
+            color: var(--black);
             font-size: 10px;
             margin: 10px 0;
           }
@@ -342,8 +343,8 @@
           padding: 0 5px 10px;
           text-align: end;
 
-          &-time {
-            color: $grayCardColor;
+          .footer__time {
+            color: var(--gray-card-color);
             font-size: 10px;
           }
         }

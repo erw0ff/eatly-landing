@@ -10,7 +10,6 @@
   left: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  transition: all 0.6s ease 0s;
   overscroll-behavior-y: contain;
 }
 
@@ -50,8 +49,8 @@
       &__title {
         margin-top: 88px;
         font-size: 35px;
-        font-weight: 600px;
-        color: $fontBlack;
+        font-weight: 600;
+        color: var(--black);
 
         @include xs (font-size, 28px);
 
@@ -71,7 +70,7 @@
           &-item {
             width: 184px;
             height: 64px;
-            background-color: $grayModal;
+            background-color: var(--gray-modal);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -86,7 +85,7 @@
           margin: 33px 0;
           font-size: 20px;
           text-align: center;
-          color: $accentColor;
+          color: var(--accent-color);
 
 
         }
@@ -108,36 +107,36 @@
           }
 
           & input:focus {
-            font-style: $mainFont;
+            font-style: var(--p-font);
             outline: none;
-            border: 2px solid $accentColor;
+            border: 2px solid var(--accent-color);
           }
 
           & > input {
             padding: 22px 0 25px 25px;
             font-size: 20px;
             width: 100%;
-            background-color: $grayModal;
+            background-color: var(--gray-modal);
             border-radius: 14px;
-            color: $accentColor;
-            border: 2px solid $grayModal;
+            color: var(--accent-color);
+            border: 2px solid var(--gray-modal);
           }
 
           &-submit {
             height: 74px;
             font-size: 18px;
-            @include ColoredButton(none, $fontWhite, $accentColor);
+            @include ColoredButton(none, var(--white), var(--accent-color));
           }
 
           &-login {
-            font-family: $mainFont;
+            font-family: var(--main-font);
             font-size: 19px;
             font-weight: 700;
 
             @include xs (text-align, center);
 
             .login__word {
-              color: $accentColor;
+              color: var(--accent-color);
             }
           }
         }
@@ -159,7 +158,7 @@
       flex-flow: column;
       justify-content: center;
       align-items: center;
-      background-color: $accentColor;
+      background-color: var(--accent-color);
       background-image: url("../../assets/images/modal-window/modal-bg.png") ;
       background-size: cover;
 
@@ -172,8 +171,8 @@
         margin: 75px 93px 0 70px;
 
         &-title {
-          font-family: $pFont;
-          color: $fontWhite;
+          font-family: var(--p-font);
+          color: var(--white);
           font-weight: 800;
           font-size: 40px;
           text-align: center;
@@ -181,7 +180,7 @@
 
         &-par {
           margin-top: 20px;
-          color: $fontWhite;
+          color: var(--white);
           font-size: 14px;
           text-align: center;
           line-height: 21px;

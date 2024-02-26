@@ -1,26 +1,27 @@
-$mainFont: "Poppins", Helvetica, Arial, sans-serif;
-$pFont: "Inter", Helvetica, Arial, sans-serif;
+:root {
+  --main-font: "Poppins", Helvetica, Arial, sans-serif;
+  --p-font: "Inter", Helvetica, Arial, sans-serif;
 
-$accentColor: #6c5fbc;
-$fontWhite: #fff;
-$fontBlack: #201F1F;
-$mainbgColor: #F9F9F9;
-$grayCardColor: #ACADB9;
-$blueGray: #CBD5E1;
-$cancelColor: #ff0000;
-$grayModal : #f3f3f3;
+  --accent-color: #6c5fbc;
+  --white: #fff;
+  --black: #201F1F;
+  --main-bg-color: #F9F9F9;
+  --footer-bg: #EAEAEA;
+  --gray-card-color: #ACADB9;
+  --blue-gray: #CBD5E1;
+  --cancel-red: #ff0000;
+  --gray-modal : #f3f3f3;
 
-$yellowBG: #F7EDD0;
-$redBG: #F7C5BA;
-$greenBG: #a3f8c2;
-$blackBG: #323142;
+  --yellow-bg: #F7EDD0;
+  --red-bg: #F7C5BA;
+  --green-bg: #a3f8c2;
+  --black-bg: #323142;
 
-$yellowColor: #DAA31A;
-$redColor: #FB471D;
-$greenColor: #309D5B;
+  --yellow-color: #DAA31A;
+  --red-color: #FB471D;
+  --green-color: #309D5B;
 
-$cardsBorder: 2px solid #EDF2F7;
-$borderLine: 1px solid #CBCBCB;
-$borderButton: 1.5px solid $accentColor;
-
-
+  --cards-border: 2px solid #EDF2F7;
+  --line: 1px solid #CBCBCB;
+  --border-button: 1.5px solid var(--accent-color);
+}

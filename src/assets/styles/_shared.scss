@@ -7,11 +7,11 @@
 }
 
 body {
-  font-family: $mainFont;
+  font-family: var(--main-font);
   font-size: 18px;
-  background-color: $mainbgColor;
+  background-color: var(--main-bg-color);
 }
 
 P {
-  font-family: $pFont;
+  font-family: var(--p-font);
 }

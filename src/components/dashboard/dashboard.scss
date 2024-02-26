@@ -1,11 +1,11 @@
-.dashbord {
+.dashboard {
   margin-top: 100px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
   padding-bottom: 120px;
-  border-bottom: $borderLine;
+  border-bottom: var(--line);
 
 
   @include md (flex-flow, column);
@@ -16,12 +16,12 @@
     &-title{
       font-size: 51px;
       Line-height: 58px;
-      color: $fontBlack;
+      color: var(--black);
 
       @include xs (font-size, 35px);
 
       .title__word {
-        color: $accentColor;
+        color: var(--accent-color);
       }
     }
 
@@ -38,7 +38,7 @@
         padding: 4px 17px;
         border-radius: 12px;
         max-width: 365px;
-        border: $cardsBorder;
+        border: var(--cards-border);
         box-shadow: 0 0 59px -17px rgba(34, 60, 80, 0.2);
         cursor: pointer;
         transition: all .3s;
@@ -59,7 +59,7 @@
           }
         }
 
-        .item-text {
+        .text {
           display: flex;
           flex-flow: column;
           gap: 5px;
@@ -68,19 +68,19 @@
             font-size: 17px;
             line-height: 26px;
             font-weight: 700;
-            color: $fontBlack;
+            color: var(--black);
 
             @include xs (font-size, 15px);
           }
 
           &__status {
-            font-family: $mainFont;
+            font-family: var(--main-font);
             font-size: 12px;
-            color: $fontBlack;
+            color: var(--black);
           }
 
           .cancel {
-            color: $cancelColor;
+            color: var(--cancel-red);
           }
         }
 
@@ -97,7 +97,7 @@
 
   &__purchases {
     max-width: 540px;
-    border: $cardsBorder;
+    border: var(--cards-border);
     border-radius: 25px;
     box-shadow: 7px 40px 50px 7px #E5E5E5B2;
 
@@ -118,7 +118,7 @@
       &__title {
         font-size: 28px;
         font-weight: 700;
-        color: $fontBlack;
+        color: var(--black);
 
         @include xxs (font-size, 24px);
       }
@@ -127,10 +127,10 @@
         display: flex;
         font-size: 19px;
         font-weight: 500;
-        color: $fontBlack;
+        color: var(--black);
         text-align: center;
         padding: 5px 13px 13px 10px ;
-        border: $cardsBorder;
+        border: var(--cards-border);
         border-radius: 13px;
         position: relative;
         top: -4px;
@@ -138,7 +138,7 @@
         transition: all .3s;
 
         &:hover {
-          border-color: $accentColor;
+          border-color: var(--accent-color);
         }
 
         @include xxs (padding, 5px 5px 7px 10px);
@@ -202,7 +202,7 @@
       }
 
       .card-item {
-        border: $cardsBorder;
+        border: var(--cards-border);
         border-radius: 15px;
         margin: 0 37px;
         padding: 25px 25px 20px;
@@ -226,14 +226,14 @@
             .top-text__title {
               font-size: 19px;
               font-weight: 700;
-              color: $fontBlack;
+              color: var(--black);
 
               @include xxs (font-size, 16px);
             }
 
             .top-text__par {
               font-size: 15px;
-              color: $grayCardColor;
+              color: var(--gray-card-color);
 
               @include xxs (font-size, 12px);
             }
@@ -244,7 +244,7 @@
             text-align: end;
             font-size: 22px;
             font-weight: 700;
-            color: $fontBlack;
+            color: var(--black);
 
             @include xxs (font-size, 18px);
           }

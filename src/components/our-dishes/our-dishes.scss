@@ -6,14 +6,14 @@
 
   &__title {
     font-size: 45px;
-    color: $fontBlack;
+    color: var(--black);
     text-align: center;
 
     @include xs (font-size, 35px);
 
 
     &-word {
-      color: $accentColor;
+      color: var(--accent-color);
     }
   }
 
@@ -27,8 +27,8 @@
     @include xs (margin-top, 40px);
 
     .dishes-card {
-      box-shadow: 7px 50px 30px 0 #E5E5E5B2;
-      border: $cardsBorder;
+      box-shadow: 6px 45px 30px 2px rgba(229, 229, 229, 0.70);
+      border: var(--cards-border);
       border-radius: 30px;
       overflow: hidden;
       padding: 35px 20px 30px 15px;
@@ -69,29 +69,29 @@
       &__body {
 
         &-link {
-          color: $yellowColor;
-          background-color: $yellowBG;
+          color: var(--yellow-color);
+          background-color: var(--yellow-bg);
           font-size: 12.5px;
           padding: 3px 7px;
           border-radius: 5.5px;
         }
         &-redLink {
-          color: $redColor;
-          background-color: $redBG;
+          color: var(--red-color);
+          background-color: var(--red-bg);
           font-size: 12.5px;
           padding: 3px 7px;
           border-radius: 5.5px;
         }
         &-greenLink {
-           color: $greenColor;
-           background-color: $greenBG;
+           color: var(--green-color);
+           background-color: var(--green-bg);
            font-size: 12.5px;
            padding: 3px 7px;
            border-radius: 5.5px;
          }
         &-title {
           font-size: 25px;
-          color: $fontBlack;
+          color: var(--black);
           line-height: 42px;
         }
       }
@@ -99,7 +99,7 @@
       &__footer {
         display: flex;
         gap: 0 10px;
-        color: $grayCardColor;
+        color: var(--gray-card-color);
 
         .time {
           color: inherit;
@@ -119,7 +119,7 @@
         }
       }
 
-      &__add2cart {
+      &__cart {
         padding-top: 15px;
         display: flex;
         justify-content: space-between;
@@ -127,22 +127,21 @@
         font-size: 24px;
         font-weight: 700;
 
-        .price {
+        &-price {
           align-self: center;
-          color: $blackBG;
+          color: var(--black-bg);
+
+          .cent {
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--gray-card-color);
+          }
         }
 
-        .cent {
-          font-size: 20px;
-          font-weight: 500;
-          color: $grayCardColor;
-
-        }
-
-        .add {
+        &-add {
           padding: 5px 13px;
           border-radius: 10px;
-          background-color: $blackBG;
+          background-color: var(--black-bg);
           align-self: center;
         }
       }
@@ -155,9 +154,9 @@
     gap: 10px;
     margin-top: 65px;
     font-size: 20px;
-    color: $grayCardColor;
+    color: var(--gray-card-color);
     padding-bottom: 120px;
-    border-bottom: $borderLine;
+    border-bottom: var(--line);
 
     &-img {
       background-image: url("../../assets/images/dishes/arrow-right.svg");

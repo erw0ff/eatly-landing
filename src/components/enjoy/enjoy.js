@@ -12,7 +12,6 @@ stars.addEventListener('click', e => {
 })
 
 
-
 import Chart from 'chart.js/auto';
 
 function ChartController() {
@@ -32,8 +31,8 @@ var myChart = new Chart(ctx, {
         datasets: [{
             label: 'Random Data',
             data: data,
-            backgroundColor: 'rgba(108, 95, 188, 1)',
-            borderColor: 'rgba(108, 95, 188, 1)',
+            backgroundColor: '#6c5fbc',
+            borderColor: '#6c5fbc',
             borderWidth: 1
         }]
     },

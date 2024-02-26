@@ -49,7 +49,7 @@
     width: 100%;
 
     &-title {
-      color: $fontWhite;
+      color: var(--white);
       font-size: 43px;
       align-self: center;
     }
@@ -57,7 +57,7 @@
     &-text {
       padding-top: 5px;
       align-items: center;
-      color: $blueGray;
+      color: var(--blue-gray);
       font-size: 15px;
       align-self: center;
       text-align: center;
